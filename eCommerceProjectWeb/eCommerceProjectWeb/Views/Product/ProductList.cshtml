@@ -1,0 +1,80 @@
+﻿@model IEnumerable<eCommerceProjectWeb.Models.ProductEntity>
+@{
+    ViewData["Title"] = "ProductList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ProductList</h1>
+<hr />
+
+<p class="float-left">
+    <a asp-action="AddProduct" asp-controller="Product" class="btn btn-outline-secondary">Add Product</a>
+</p>
+
+<p class="float-right">
+    @* <a asp-action="AddCustomer" asp-controller="Item" class="btn btn-outline-secondary">Add Customer</a> |*@
+    @*<a asp-action="List" class="btn btn-outline-primary">Item List</a> |
+    <a asp-action="DepartmentList" asp-controller="Item" class="btn btn-outline-primary">Category List</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ProName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProQuantity)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ProPrice)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ProCategory)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SellerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerName)
+            </th>
+
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProName)
+                </td>             
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProCategory)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerName)
+                </td>
+                <td>
+                    @Html.ActionLink("Update", "AddProduct", new {  item.ProId, item.ProName, item.ProQuantity, item.ProPrice, item.ProCategory, item.SellerId } , new { @class="btn btn-outline-success rounded-pill"}) |
+                    @Html.ActionLink("Delete", "DeleteProduct", new {  item.ProId  }, new { @class = "btn btn-outline-danger rounded-pill",onclick="return confirm('Do you really want this record?')" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

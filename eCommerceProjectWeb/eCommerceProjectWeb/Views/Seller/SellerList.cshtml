@@ -1,0 +1,79 @@
+﻿@model IEnumerable<eCommerceProjectWeb.Models.SellerEntity>
+@{
+    ViewData["Title"] = "SellerList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SellerList</h1>
+<hr />
+
+<p class="float-left">
+    <a asp-action="AddSeller" asp-controller="Seller" class="btn btn-outline-secondary">Add Seller</a>
+</p>
+
+<p class="float-right">
+    @* <a asp-action="AddCustomer" asp-controller="Item" class="btn btn-outline-secondary">Add Customer</a> |*@
+    @*<a asp-action="List" class="btn btn-outline-primary">Item List</a> |
+    <a asp-action="DepartmentList" asp-controller="Item" class="btn btn-outline-primary">Category List</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SellerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerPhone)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SellerAddress)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SellerCNIC)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SellerEmail)
+            </th>
+
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerCNIC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerEmail)
+
+                </td>
+                @*
+            <td>
+            @Html.DisplayFor(modelItem => item.Type)
+            </td>*@
+
+                <td>
+                    @Html.ActionLink("Update", "AddSeller", new {  item.SellerId, item.SellerName, item.SellerPhone, item.SellerAddress, item.SellerCNIC, item.SellerEmail } , new { @class="btn btn-outline-success rounded-pill"}) |
+                    @Html.ActionLink("Delete", "DeleteSeller", new {  item.SellerId  }, new { @class = "btn btn-outline-danger rounded-pill",onclick="return confirm('Do you really want this record?')" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

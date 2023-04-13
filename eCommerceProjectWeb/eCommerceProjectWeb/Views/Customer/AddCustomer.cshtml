@@ -1,0 +1,55 @@
+﻿@model eCommerceProjectWeb.Models.CustomerEntity
+@{
+    ViewData["Title"] = "AddCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddCustomer</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveCustomer">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="CostId" />
+                <label asp-for="CostName" class="control-label"></label>
+                <input asp-for="CostName" class="form-control" />
+                <span asp-validation-for="CostName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CostAddress" class="control-label"></label>
+                <input asp-for="CostAddress" class="form-control" />
+                <span asp-validation-for="CostAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CostContact" class="control-label"></label>
+                <input asp-for="CostContact" class="form-control" />
+                <span asp-validation-for="CostContact" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CostCNIC" class="control-label"></label>
+                <input asp-for="CostCNIC" class="form-control" />
+                <span asp-validation-for="CostCNIC" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="CostEmail" class="control-label"></label>
+                <input asp-for="CostEmail" class="form-control" />
+                <span asp-validation-for="CostEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="CustomerList" class="btn btn-outline-success">Customer List</a>
+            </div>
+
+           @* <a href="pages/page2.html">Go to Page 2</a>*@
+
+        </form>
+    </div>
+</div>

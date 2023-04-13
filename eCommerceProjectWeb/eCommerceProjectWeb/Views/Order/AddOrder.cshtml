@@ -1,0 +1,69 @@
+﻿@model eCommerceProjectWeb.Models.OrderEntity
+@{
+    ViewData["Title"] = "AddOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddOrder</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveOrder">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="OrderId" />
+
+                <input type="hidden" asp-for="ProId" />
+
+               @* <label asp-for="ProId" class="control-label"></label>
+                <select asp-for="ProId" class="form-control" asp-items="@(new SelectList(ViewBag.ProList,"ProId","ProName"))">
+                </select>*@
+            </div>
+
+             <div class="form-group">
+            <label asp-for="CostId" class="control-label"></label>
+            <select asp-for="CostId" class="form-control" asp-items="@(new SelectList(ViewBag.CostList,"CostId","CostName"))">
+            </select>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SellerId" class="control-label"></label>
+                <select asp-for="SellerId" class="form-control" asp-items="@(new SelectList(ViewBag.SellerList,"SellerId","SellerName"))">
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OrderTotal" class="control-label"></label>
+                <input asp-for="OrderTotal" class="form-control" />
+                <span asp-validation-for="OrderTotal" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="OrderStatus" class="control-label"></label>
+                <input asp-for="OrderStatus" class="form-control" />
+                <span asp-validation-for="OrderStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PaymentStatus" class="control-label"></label>
+                <input asp-for="PaymentStatus" class="form-control" />
+                <span asp-validation-for="PaymentStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OrderDate" class="control-label"></label>
+                <input asp-for="OrderDate" class="form-control" />
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="OrderList" class="btn btn-outline-success">Order List</a>
+            </div>
+        </form>
+    </div>
+</div>

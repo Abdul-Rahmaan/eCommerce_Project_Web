@@ -1,0 +1,96 @@
+﻿@model IEnumerable<eCommerceProjectWeb.Models.OrderEntity>
+@{
+    ViewData["Title"] = "OrderList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>OrderList</h1>
+<hr />
+
+<p class="float-left">
+    <a asp-action="AddOrder" asp-controller="Order" class="btn btn-outline-secondary">Add Order</a>
+</p>
+
+<p class="float-right">
+    @* <a asp-action="AddCustomer" asp-controller="Item" class="btn btn-outline-secondary">Add Customer</a> |*@
+    @*<a asp-action="List" class="btn btn-outline-primary">Item List</a> |
+    <a asp-action="DepartmentList" asp-controller="Item" class="btn btn-outline-primary">Category List</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ProId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostId)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SellerId)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.OrderTotal)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.OrderStatus)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentStatus)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CostId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderTotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderStatus)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentStatus)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Update", "AddOrder", new {  item.OrderId, item.ProId, item.CostId, item.SellerId, item.OrderTotal, item.OrderStatus, item.PaymentStatus, item.OrderDate } , new { @class="btn btn-outline-success rounded-pill"}) |
+                    @Html.ActionLink("Delete", "DeleteOrder", new {  item.OrderId  }, new { @class = "btn btn-outline-danger rounded-pill",onclick="return confirm('Do you really want this record?')" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

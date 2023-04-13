@@ -1,0 +1,70 @@
+﻿@model eCommerceProjectWeb.Models.ProductEntity
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddProduct</h1>
+@*
+<img src="FoodItem.jpg" alt="FFFooodddiiieee" width="300" height="300">*@
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="ProId" />
+                <label asp-for="ProName" class="control-label"></label>
+                <input asp-for="ProName" class="form-control" />
+                <span asp-validation-for="ProName" class="text-danger"></span>
+            </div>
+
+          @*  <div class="float-right">
+                {
+                img: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.gettyimages.com%2Fid%2F1309118928%2Fphoto%2Ftrendy-collage-made-of-natural-cosmetics-and-beauty-products-for-body-and-face-care.jpg%3Fs%3D612x612%26w%3Dgi%26k%3D20%26c%3DmsPfuisfb4HMV4qmws-NRVz4JGQRSAnKsaPEVk-NFn4%3D&tbnid=WGh0D3E-2zqHYM&vet=12ahUKEwjM75qth5X-AhUnnCcCHRsuA_EQMygIegUIARCrAQ..i&imgrefurl=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Fbeauty-product&docid=gEmxMpbgPZmbAM&w=612&h=408&q=jpg%20pics%20of%20different%20products&ved=2ahUKEwjM75qth5X-AhUnnCcCHRsuA_EQMygIegUIARCrAQ");
+                height: 400px;
+                width: 100%;
+                }
+            </div>*@
+
+            <div class="form-group">
+                <label asp-for="ProQuantity" class="control-label"></label>
+                <input asp-for="ProQuantity" class="form-control" />
+                <span asp-validation-for="ProQuantity" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProPrice" class="control-label"></label>
+                <input asp-for="ProPrice" class="form-control" />
+                <span asp-validation-for="ProPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProCategory" class="control-label"></label>
+                <input asp-for="ProCategory" class="form-control" />
+                <span asp-validation-for="ProCategory" class="text-danger"></span>
+            </div>
+
+
+            @*<div class="form-group">
+                <label asp-for="SellerId" class="control-label"></label>
+                <input asp-for="SellerId" class="form-control" />
+                <span asp-validation-for="SellerId" class="text-danger"></span>
+            </div>*@
+
+              <div class="form-group">
+                <label asp-for="SellerId" class="control-label"></label>
+                <select asp-for="SellerId" class="form-control" asp-items="@(new SelectList(ViewBag.SellList,"SellerId","SellerName"))">
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="ProductList" class="btn btn-outline-success">Product List</a>
+            </div>
+        </form>
+    </div>
+</div>
