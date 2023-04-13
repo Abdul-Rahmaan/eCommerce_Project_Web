@@ -96,21 +96,27 @@ namespace eCommerceProjectWeb.Controllers
 
 
                 var OrderList = from a in _Db.tblOrder
-                                  join b in _Db.tblProduct
-                                  on a.ProId equals b.ProId
-                                  into Order
-                                  from b in Order.DefaultIfEmpty()
+                                  join b in _Db.tblProduct on a.ProId equals b.ProId
+                                  join c in _Db.tblCustomer on a.CostId equals c.CostId
+                                join d in _Db.tblSeller on a.SellerId equals d.SellerId
+                                //into Order
+                                //from b in Order.DefaultIfEmpty()
 
 
 
 
-                                  select new OrderEntity
+                                select new OrderEntity
                                   {
 
                                       ProId = a.ProId,
                                       ProName = b == null ? "" : b.ProName,
+
                                       CostId = a.CostId,
+                                      CostName = c == null ? "" : c.CostName,
+
                                       SellerId = a.SellerId,
+                                      SellerName = d == null ? "" : d.SellerName,
+
                                       OrderTotal = a.OrderTotal,
                                       OrderStatus = a.OrderStatus,
                                       PaymentStatus = a.PaymentStatus,

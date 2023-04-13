@@ -8589,11 +8589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\project\\eCommerceProjectByWeb\\eCommerceProjectWeb\\eCommerceProjectWeb\\eCommerceProjectWeb.csproj",
+      "projectUniqueName": "E:\\project\\eCommerceWebProject\\eCommerce_Project_Web\\eCommerceProjectWeb\\eCommerceProjectWeb\\eCommerceProjectWeb.csproj",
       "projectName": "eCommerceProjectWeb",
-      "projectPath": "E:\\project\\eCommerceProjectByWeb\\eCommerceProjectWeb\\eCommerceProjectWeb\\eCommerceProjectWeb.csproj",
+      "projectPath": "E:\\project\\eCommerceWebProject\\eCommerce_Project_Web\\eCommerceProjectWeb\\eCommerceProjectWeb\\eCommerceProjectWeb.csproj",
       "packagesPath": "C:\\Users\\3com laptop\\.nuget\\packages\\",
-      "outputPath": "E:\\project\\eCommerceProjectByWeb\\eCommerceProjectWeb\\eCommerceProjectWeb\\obj\\",
+      "outputPath": "E:\\project\\eCommerceWebProject\\eCommerce_Project_Web\\eCommerceProjectWeb\\eCommerceProjectWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\3com laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",

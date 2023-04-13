@@ -20,18 +20,26 @@
     <thead>
         <tr>
 
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.ProId)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ProName)
             </th>
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.CostId)
             </th>
+*@
+            <th>
+                @Html.DisplayNameFor(model => model.CostName)
+            </th>
+
+           @* <th>
+                @Html.DisplayNameFor(model => model.SellerId)
+            </th>*@
 
             <th>
-                @Html.DisplayNameFor(model => model.SellerId)
+                @Html.DisplayNameFor(model => model.SellerName)
             </th>
 
             <th>
@@ -58,18 +66,26 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
+               @* <td>
                     @Html.DisplayFor(modelItem => item.ProId)
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.ProName)
                 </td>
-                <td>
+              @*  <td>
                     @Html.DisplayFor(modelItem => item.CostId)
+                </td>*@
+                 <td>
+                    @Html.DisplayFor(modelItem => item.CostName)
                 </td>
-                <td>
+              @*  <td>
                     @Html.DisplayFor(modelItem => item.SellerId)
+                </td>*@
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellerName)
                 </td>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.OrderTotal)
                 </td>

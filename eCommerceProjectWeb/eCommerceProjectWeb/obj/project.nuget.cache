@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EGJEyW0EyrXH29DQXlQiSRgAhJTQECReu2MFlfOIQf06kMS6uy/MO461vNLDSP90l1FEnp6dg6tH8/Erci36OA==",
+  "dgSpecHash": "2x/eAMPbbQ06s/99ca+YIQCeS4GSSdpZt69xcc4Fw5TfZlilYGAzchgY2ANmpFidXzrWFhljkE6qgIlof85hJA==",
   "success": true,
-  "projectFilePath": "E:\\project\\eCommerceProjectByWeb\\eCommerceProjectWeb\\eCommerceProjectWeb\\eCommerceProjectWeb.csproj",
+  "projectFilePath": "E:\\project\\eCommerceWebProject\\eCommerce_Project_Web\\eCommerceProjectWeb\\eCommerceProjectWeb\\eCommerceProjectWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\3com laptop\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\3com laptop\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -53,7 +53,7 @@ namespace eCommerceProjectWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Category}/{action=CategoryList}/{id?}");
+                    pattern: "{controller=Customer}/{action=CustomerList}/{id?}");
             });
         }
     }
