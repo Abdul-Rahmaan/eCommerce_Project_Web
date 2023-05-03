@@ -46,17 +46,17 @@ namespace eCommerceProjectWeb.Controllers
 
 
                 var ProductList = from a in _Db.tblProduct
-                                 join b in _Db.tblSeller
-                                 on a.SellerId equals b.SellerId
-                                 into Product
-                                 from b in Product.DefaultIfEmpty()
+                                  join b in _Db.tblSeller
+                                  on a.SellerId equals b.SellerId
+                                  into Product
+                                  from b in Product.DefaultIfEmpty()
 
 
 
 
-                                 select new ProductEntity
-                                 {
-
+                                  select new ProductEntity
+                                  {
+                                      ProId = a.ProId,
                                      ProName = a.ProName,
                                      ProQuantity = a.ProQuantity,
                                      ProPrice = a.ProPrice,
