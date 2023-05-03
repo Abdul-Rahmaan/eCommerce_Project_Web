@@ -310,9 +310,5 @@ E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommer
 E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\obj\Debug\netcoreapp3.1\eCommerceProjectWeb.dll
 E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\obj\Debug\netcoreapp3.1\eCommerceProjectWeb.pdb
 E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\obj\Debug\netcoreapp3.1\eCommerceProjectWeb.genruntimeconfig.cache
-E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\bin\Debug\netcoreapp3.1\star-admin2-free-admin-template-main\star-admin2-free-admin-template-main\template\package-lock.json
-E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\bin\Debug\netcoreapp3.1\star-admin2-free-admin-template-main\star-admin2-free-admin-template-main\template\package.json
-E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\bin\Debug\netcoreapp3.1\star-admin2-free-admin-template-main\star-admin2-free-admin-template-main\template\vendors\tinymce\bower.json
-E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\bin\Debug\netcoreapp3.1\star-admin2-free-admin-template-main\star-admin2-free-admin-template-main\template\vendors\tinymce\composer.json
-E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\bin\Debug\netcoreapp3.1\star-admin2-free-admin-template-main\star-admin2-free-admin-template-main\template\vendors\tinymce\package.json
-E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\bin\Debug\netcoreapp3.1\star-admin2-free-admin-template-main\star-admin2-free-admin-template-main\template\vendors\typicons\typicons.json
+E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\obj\Debug\netcoreapp3.1\Razor\Views\login\LoginList.cshtml.g.cs
+E:\project\eCommerceWebProject\eCommerce_Project_Web\eCommerceProjectWeb\eCommerceProjectWeb\obj\Debug\netcoreapp3.1\Razor\Views\login\AddLogin.cshtml.g.cs

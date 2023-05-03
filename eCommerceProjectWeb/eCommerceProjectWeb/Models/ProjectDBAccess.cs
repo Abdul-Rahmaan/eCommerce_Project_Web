@@ -13,5 +13,8 @@ namespace eCommerceProjectWeb.Models
         public DbSet<CustomerEntity> tblCustomer { get; set; }
         public DbSet<SellerEntity> tblSeller { get; set; }
         public DbSet<OrderEntity> tblOrder { get; set; }
+
+        public DbSet<LoginEntity> tblLogin{ get; set; }
+
     }
 }

@@ -56,7 +56,7 @@ namespace eCommerceProjectWeb.Controllers
 
                                   select new ProductEntity
                                   {
-                                      ProId = a.ProId,
+                                     ProId = a.ProId,
                                      ProName = a.ProName,
                                      ProQuantity = a.ProQuantity,
                                      ProPrice = a.ProPrice,
