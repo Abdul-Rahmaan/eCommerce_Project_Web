@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<eCommerceProjectWeb.Models.LoginEntity>
 @{
-    ViewData["Title"] = "LoginList";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "LoginPage";
+    Layout = "";
 }
 
-<h1>LoginList</h1>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,19 +15,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Star Admin2 </title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../../vendors/feather/feather.css">
-    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
-    <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/Assests/vendors/feather/feather.css">
+    <link rel="stylesheet" href="~/Assests/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/Assests/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Assests/vendors/typicons/typicons.css">
+    <link rel="stylesheet" href="~/Assests/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/Assests/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="~/Assests/css/vertical-layout-light/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="../../images/favicon.png" />
+    <link rel="shortcut icon" href="~/Assests/images/favicon.png" />
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
-                                <img src="../../images/logo.svg" alt="logo">
+                              @*  <img src="~/Assests/images/logo.svg" alt="logo">*@
                             </div>
                             <h4>Hello! let's get started</h4>
                             <h6 class="fw-light">Sign in to continue.</h6>
